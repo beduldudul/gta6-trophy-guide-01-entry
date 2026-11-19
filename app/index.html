@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+    <h1>Leonida Platinum</h1>
+    <p class="sub">Every one of the 55 official trophies — name, description and grade as PlayStation publishes them — with a guide in our own words, a cited source beside each one, a roadmap to the platinum, and a tracker that saves in your browser.</p>
+    <p class="facts"><span><b>55</b> trophies</span><span><b>1</b> Platinum</span><span><b>2</b> Gold</span><span><b>6</b> Silver</span><span><b>46</b> Bronze</span><span><b>28</b> hidden</span><span><b>0</b> online</span><span><b>1</b> missable</span></p>
+    <div class="progress" id="progressBox" aria-live="polite">
+      <div class="progressRow"><span id="progressText">Loading trophies…</span><span id="gradeText"></span></div>
+      <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="tabs" aria-label="Views">
+    <button id="tabTracker" class="tab active" type="button">Tracker</button>
+    <button id="tabRoadmap" class="tab" type="button">Roadmap to Platinum</button>
+    <button id="tabMissables" class="tab" type="button">Missable trophies</button>
+  </nav>
+
+  <section id="viewTracker" class="view">
+    <div class="toolbar">
+      <input id="searchBox" type="search" placeholder="Search trophies, descriptions and guides…" aria-label="Search trophies">
+      <div class="filters" id="kindFilters" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="chip active">All 55</button>
+        <button type="button" data-kind="story" class="chip">Story</button>
+        <button type="button" data-kind="missable" class="chip">Missable</button>
+        <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+        <button type="button" data-kind="activities" class="chip">Activities</button>
+        <button type="button" data-kind="online" class="chip">Online</button>
+      </div>
+    </div>
+    <div class="toolbar2">
+      <label class="toggle"><input id="spoilerToggle" type="checkbox"> <span>Hide story spoilers — story trophies stay hidden until earned</span></label>
+      <label class="toggle"><input id="hideEarnedToggle" type="checkbox"> <span>Hide earned</span></label>
+      <span class="spacer"></span>
+      <button id="exportBtn" type="button" class="btn">Export progress (.json)</button>
+      <button id="importBtn" type="button" class="btn">Import progress</button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
+      <button id="resetBtn" type="button" class="btn danger">Reset</button>
+    </div>
+    <p id="countLine" class="countLine"></p>
+    <p id="onlineNote" class="note" hidden>There are no online trophies. All 55 GTA VI trophies unlock in single-player — the Online filter is empty on purpose.</p>
+    <ul id="trophyList" class="list"></ul>
+    <p id="emptyNote" class="note" hidden>No trophies match this search and filter.</p>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p>Built from the official trophy descriptions alone. One playthrough is enough: there is no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. Never use cheats on your trophy save — cheats should switch off trophies and saving.</p>
+    <ol id="roadmapList" class="roadmap"></ol>
+    <h3>Save discipline (read this first)</h3>
+    <ul class="rules">
+      <li><b>Chapter saves:</b> one manual save at the start of Chapters 1–4, plus one before the final mission. The game has 15 manual slots plus one autosave — rotate the rest.</li>
+      <li><b>Chapter 1:</b> do Lucia&rsquo;s balcony meditation before Chapter 1 ends (see Positive Mental Attitude). Keep that save until the trophy pops.</li>
+      <li><b>Chapter 3:</b> race Yago&rsquo;s time-sensitive street race the moment it appears (hourglass icon); it feeds Strangers &amp; Freaks.</li>
+      <li><b>After the story:</b> everything outside the story stays open, and the 100% checklist appears under Progress &gt; Stats &gt; 100% Completion. Work done earlier still counts.</li>
+    </ul>
+  </section>
+
+  <section id="viewMissables" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p>Only <b>one</b> trophy is reported missable. Every other trophy stays earnable after the story. The list below is built from the official descriptions and launch-week reporting; where a method is not yet confirmed, the guide says so instead of guessing.</p>
+    <ul id="missableList" class="list"></ul>
+    <h3>Almost-missable: watch these</h3>
+    <ul class="rules">
+      <li><b>Strangers &amp; Freaks</b> — the Chapter 3 race against Yago is time-sensitive. Save first, race at once.</li>
+      <li><b>Let&rsquo;s Go Bowling</b> — if you leave a valuable behind at Kingpin Bowling, the operation comes back later, so it is not missable.</li>
+      <li><b>Story mission trophies</b> — unmissable, but there is no mission replay, so chapter saves are your only safety net.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Names, descriptions and grades are the official PlayStation list, as published by Exophase and PSNProfiles (the two agree on every name, description and grade). Every guide is written in our own words for this entry and cites its sources beside the trophy. Where a hidden trophy&rsquo;s method is not yet confirmed in play, the guide says so plainly.</p>
+    <p>Progress is saved in this browser only (localStorage) and can be exported and imported as JSON. This guide works offline from its own files and makes no network request. No Rockstar Games logo, artwork or game screenshots are used.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
