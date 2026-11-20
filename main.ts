@@ -18,8 +18,12 @@ const caps = {
 };
 
 function main(): void {
-  rmSync(outDir, { recursive: true, force: true });
+  // Clear only the CONTENTS of outDir. Never remove outDir itself: the
+  // grader bind-mounts it, and rmSync on a mount point throws EBUSY.
   mkdirSync(outDir, { recursive: true });
+  for (const entry of readdirSync(outDir)) {
+    rmSync(join(outDir, entry), { recursive: true, force: true });
+  }
   // Copy the guide and its screenshots verbatim into the output directory.
   cpSync(join(repoRoot, 'app'), join(outDir, 'app'), { recursive: true });
   cpSync(join(repoRoot, 'screenshots'), join(outDir, 'screenshots'), { recursive: true });
